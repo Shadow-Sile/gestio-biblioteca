@@ -72,7 +72,7 @@ javac *.java
 java Main
 ```
 
-### Des de Laragon / IntelliJ / Eclipse / NetBeans
+### Des de Eclipse
 
 Obre la carpeta com a projecte Java i executa la classe `Main`.
 
@@ -84,7 +84,7 @@ Les branques que cal mantenir són:
 
 ```bash
 git checkout -b dario      # branca de dario
-git checkout -b diego   # branca del company
+git checkout -b diego   # branca del diego
 ```
 
 Cada membre treballa a la seva branca. Quan una funcionalitat està
