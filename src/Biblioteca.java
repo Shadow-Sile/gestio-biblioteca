@@ -18,7 +18,7 @@ public class Biblioteca {
         this.seguentId = 1;
     }
 
-    // ============== AFEGIR ==============
+    // AFEGIR
     public Llibre afegirLlibre(String titol, String autor, String categoria) {
         Llibre llibre = new Llibre(seguentId++, titol, autor, categoria);
         llibres.add(llibre);
@@ -26,20 +26,20 @@ public class Biblioteca {
         return llibre;
     }
 
-    // ============== MODIFICAR ==============
+    //  MODIFICAR
     /**
      * Modifica el llibre amb l'id donat. Si algun camp està buit, no es canvia.
      */
     public boolean modificarLlibre(int id, String nouTitol, String nouAutor, String novaCategoria) {
         Llibre l = buscarPerId(id);
         if (l == null) return false;
-        if (nouTitol != null && !nouTitol.isEmpty())     l.setTitol(nouTitol);
-        if (nouAutor != null && !nouAutor.isEmpty())     l.setAutor(nouAutor);
+        if (nouTitol != null && !nouTitol.isEmpty()) l.setTitol(nouTitol);
+        if (nouAutor != null && !nouAutor.isEmpty()) l.setAutor(nouAutor);
         if (novaCategoria != null && !novaCategoria.isEmpty()) l.setCategoria(novaCategoria);
         return true;
     }
 
-    // ============== ELIMINAR ==============
+    //  ELIMINAR
     public boolean eliminarLlibre(int id) {
         Llibre l = buscarPerId(id);
         if (l == null) return false;
@@ -51,19 +51,19 @@ public class Biblioteca {
         return true;
     }
 
-    // ============== LLISTAR ==============
+    //  LLISTAR
     public void llistarLlibres() {
         if (llibres.isEmpty()) {
             System.out.println("No hi ha cap llibre a la biblioteca.");
             return;
         }
-        System.out.println("--- Llistat de llibres ---");
+        System.out.println("Llistat de llibres");
         for (Llibre l : llibres) {
             System.out.println(l);
         }
     }
 
-    // ============== CERCAR ==============
+    // CERCAR 
     public Llibre buscarPerId(int id) {
         for (Llibre l : llibres) {
             if (l.getId() == id) return l;
@@ -116,12 +116,12 @@ public class Biblioteca {
         return resultat;
     }
 
-    // ============== DISPONIBILITAT ==============
+    //DISPONIBILITAT
     public boolean comprovarDisponibilitat(int id) {
         Llibre l = buscarPerId(id);
         return l != null && !l.esPrestat();
     }
 
-    // ============== Getters ==============
+    // Getters
     public List<Llibre> getLlibres() { return llibres; }
 }
