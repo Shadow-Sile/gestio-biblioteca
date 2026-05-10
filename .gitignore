@@ -1,0 +1,21 @@
+# Compilats Java
+*.class
+*.jar
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Build
+out/
+target/
+build/
+bin/
