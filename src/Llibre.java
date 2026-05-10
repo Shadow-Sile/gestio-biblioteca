@@ -20,19 +20,19 @@ public class Llibre {
         this.prestat = false;
     }
 
-    // --- Getters ---
+    //Getters
     public int getId() { return id; }
     public String getTitol() { return titol; }
     public String getAutor() { return autor; }
     public String getCategoria() { return categoria; }
     public boolean esPrestat() { return prestat; }
 
-    // --- Setters (per modificar) ---
+    //Setters (per modificar)
     public void setTitol(String titol) { this.titol = titol; }
     public void setAutor(String autor) { this.autor = autor; }
     public void setCategoria(String categoria) { this.categoria = categoria; }
 
-    // --- Lògica de préstec ---
+    //Lògica de préstec
     public void prestar() { this.prestat = true; }
     public void retornar() { this.prestat = false; }
 
