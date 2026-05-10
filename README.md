@@ -6,7 +6,7 @@ Sistema de gestió d'una biblioteca implementat en Java amb POO.
 ## Membres del grup
 
 - **dario** — branca `dario` — classes `Llibre`, `Biblioteca`, `NormalitzadorText`
-- **diego** — branca `company1` — classes `Usuari`, `Prestec`, `GestorBiblioteca`
+- **diego** — branca `diego` — classes `Usuari`, `Prestec`, `GestorBiblioteca`
 
 > Repartiment de la classe `Main` (menú): integració conjunta a la branca `main`.
 
