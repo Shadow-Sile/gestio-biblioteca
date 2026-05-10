@@ -44,9 +44,8 @@ public class Main {
         } while (opcio != 0);
     }
 
-    // =========================================================
-    //                       MENU
-    // =========================================================
+    //  MENU
+
     private static void mostrarMenu() {
         System.out.println();
         System.out.println("========= GESTIO DE BIBLIOTECA =========");
@@ -69,9 +68,8 @@ public class Main {
         System.out.println("========================================");
     }
 
-    // =========================================================
-    //                  UTILITATS DE LECTURA
-    // =========================================================
+    //  UTILITATS DE LECTURA
+
     private static int llegirInt(String missatge) {
         System.out.print(missatge);
         while (!sc.hasNextInt()) {
@@ -88,9 +86,8 @@ public class Main {
         return sc.nextLine();
     }
 
-    // =========================================================
-    //                       LLIBRES
-    // =========================================================
+    // LLIBRES
+
     private static void afegirLlibre() {
         String titol = llegirText("Titol: ");
         String autor = llegirText("Autor: ");
@@ -131,10 +128,9 @@ public class Main {
         if (resultat.isEmpty()) System.out.println("Cap resultat.");
         else for (Llibre l : resultat) System.out.println(l);
     }
+    
+    // USUARIS
 
-    // =========================================================
-    //                       USUARIS
-    // =========================================================
     private static void afegirUsuari() {
         String nom = llegirText("Nom: ");
         String dni = llegirText("DNI: ");
@@ -167,9 +163,8 @@ public class Main {
         else for (Usuari u : resultat) System.out.println(u);
     }
 
-    // =========================================================
-    //                       PRESTECS
-    // =========================================================
+    // PRESTECS
+
     private static void prestarLlibre() {
         int idU = llegirInt("ID de l'usuari: ");
         int idL = llegirInt("ID del llibre: ");
@@ -197,9 +192,8 @@ public class Main {
         gestor.historialUsuari(id);
     }
 
-    // =========================================================
-    //                   DADES D'EXEMPLE
-    // =========================================================
+    //  DADES D'EXEMPLE
+
     private static void carregarDadesExemple() {
         biblioteca.afegirLlibre("1984", "George Orwell", "Novel.la");
         biblioteca.afegirLlibre("El petit princep", "Antoine de Saint-Exupery", "Novel.la");
