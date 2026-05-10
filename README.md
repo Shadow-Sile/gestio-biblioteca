@@ -11,7 +11,7 @@ desenvolupat en grup amb **Git i GitHub** (branques per persona).
 | Membre    | Branca       | Classes                                              |
 |-----------|--------------|------------------------------------------------------|
 | **dario**    | `dario`      | `Llibre`, `NormalitzadorText`, `Biblioteca`         |
-| **company1** | `company1`   | `Usuari`, `Prestec`, `GestorBiblioteca`             |
+| **diego** | `diego`   | `Usuari`, `Prestec`, `GestorBiblioteca`             |
 
 > La classe `Main` (menú per teclat) és la integració conjunta a la branca `main`.
 
@@ -54,9 +54,9 @@ gestio-biblioteca/
     ├── Llibre.java              (dario)
     ├── NormalitzadorText.java   (dario)
     ├── Biblioteca.java          (dario)
-    ├── Usuari.java              (company1)
-    ├── Prestec.java             (company1)
-    ├── GestorBiblioteca.java    (company1)
+    ├── Usuari.java              (diego)
+    ├── Prestec.java             (diego)
+    ├── GestorBiblioteca.java    (diego)
     └── Main.java                (conjunt)
 ```
 
@@ -84,7 +84,7 @@ Les branques que cal mantenir són:
 
 ```bash
 git checkout -b dario      # branca de dario
-git checkout -b company1   # branca del company
+git checkout -b diego   # branca del company
 ```
 
 Cada membre treballa a la seva branca. Quan una funcionalitat està
@@ -93,7 +93,7 @@ acabada, es fa **merge** a `main`:
 ```bash
 git checkout main
 git merge --no-ff dario
-git merge --no-ff company1
+git merge --no-ff diego
 ```
 
 ### Convenció de commits
