@@ -1,16 +1,115 @@
 # Gestió de Biblioteca
 
-Projecte de l'AEA3-1 de M-ED (Entorns de desenvolupament).
-Sistema de gestió d'una biblioteca implementat en Java amb POO.
+Projecte de l'**AEA3-1** del mòdul **M-ED (Entorns de desenvolupament)**.
+Sistema de gestió d'una biblioteca implementat en **Java** amb POO,
+desenvolupat en grup amb **Git i GitHub** (branques per persona).
+
+---
 
 ## Membres del grup
 
-- **dario** — branca `dario` — classes `Llibre`, `Biblioteca`, `NormalitzadorText`
-- **company1** — branca `company1` — classes `Usuari`, `Prestec`, `GestorBiblioteca`
+| Membre    | Branca       | Classes                                              |
+|-----------|--------------|------------------------------------------------------|
+| **dario**    | `dario`      | `Llibre`, `NormalitzadorText`, `Biblioteca`         |
+| **company1** | `company1`   | `Usuari`, `Prestec`, `GestorBiblioteca`             |
 
-> Repartiment de la classe `Main` (menú): integració conjunta a la branca `main`.
+> La classe `Main` (menú per teclat) és la integració conjunta a la branca `main`.
 
-## Estat
+---
 
-En desenvolupament.
+## Funcionalitats
+
+El programa mostra un menú amb **16 opcions**:
+
+```
+  1. Afegir llibre              9. Llistar usuaris
+  2. Modificar llibre          10. Cercar usuari
+  3. Eliminar llibre           11. Prestar llibre
+  4. Llistar llibres           12. Retornar llibre
+  5. Cercar llibre             13. Consultar disponibilitat
+  6. Afegir usuari             14. Historial de préstecs d'un usuari
+  7. Modificar usuari          15. Estadístiques
+  8. Eliminar usuari            0. Sortir
+```
+
+### Millores implementades (de l'enunciat)
+
+- Historial complet de préstecs per usuari.
+- Comprovació de disponibilitat d'un llibre.
+- Categories de llibres ("Novel·la", "Història", "Ciència"...).
+- Estadístiques: llibre més prestat, usuari més actiu, préstecs per categoria.
+- Cerca **ignorant accents i majúscules** (classe `NormalitzadorText`).
+- Màxim de llibres per usuari (`MAX_LLIBRES_PER_USUARI = 3`).
+- Data de retorn prevista automàtica (2 setmanes).
+
+---
+
+## Estructura del projecte
+
+```
+gestio-biblioteca/
+├── README.md
+├── .gitignore
+└── src/
+    ├── Llibre.java              (dario)
+    ├── NormalitzadorText.java   (dario)
+    ├── Biblioteca.java          (dario)
+    ├── Usuari.java              (company1)
+    ├── Prestec.java             (company1)
+    ├── GestorBiblioteca.java    (company1)
+    └── Main.java                (conjunt)
+```
+
+---
+
+## Com executar el projecte
+
+### Des de la línia de comandes
+
+```bash
+cd src
+javac *.java
+java Main
+```
+
+### Des de Laragon / IntelliJ / Eclipse / NetBeans
+
+Obre la carpeta com a projecte Java i executa la classe `Main`.
+
+---
+
+## Flux de treball amb Git
+
+Les branques que cal mantenir són:
+
+```bash
+git checkout -b dario      # branca de dario
+git checkout -b company1   # branca del company
+```
+
+Cada membre treballa a la seva branca. Quan una funcionalitat està
+acabada, es fa **merge** a `main`:
+
+```bash
+git checkout main
+git merge --no-ff dario
+git merge --no-ff company1
+```
+
+### Convenció de commits
+
+S'utilitza **Conventional Commits**:
+
+- `feat(modul): ...` — nova funcionalitat
+- `fix(modul): ...` — correcció de bug
+- `chore: ...` — tasques de manteniment
+- `docs: ...` — canvis a la documentació
+- `merge: ...` — merge de branques
+
+---
+
+## Historial de versions
+
+- **v1.0** — Versió inicial amb menú complet, totes les classes
+  i les millores opcionals (categories, historial, estadístiques).
 
