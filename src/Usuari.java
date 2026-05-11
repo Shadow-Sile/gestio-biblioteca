@@ -1,14 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Classe Usuari
- * Representa un usuari de la biblioteca. Manté la llista de llibres
- * que té actualment en préstec i un historial complet dels préstecs
- * que ha fet.
- *
- * Autor: company1 (branca: company1)
- */
 public class Usuari {
     private int id;
     private String nom;
@@ -48,6 +39,7 @@ public class Usuari {
         historial.add(p);
     }
 
+    //el tostring que no falteeh
     @Override
     public String toString() {
         return "[" + id + "] " + nom + " (DNI: " + dni + ")"

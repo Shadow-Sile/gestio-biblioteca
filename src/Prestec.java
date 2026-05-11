@@ -1,13 +1,4 @@
 import java.time.LocalDate;
-
-/**
- * Classe Prestec
- * Representa un préstec d'un llibre a un usuari. Guarda la data de préstec,
- * la data de retorn prevista (2 setmanes després) i la data real de retorn
- * un cop el llibre torna.
- *
- * Autor: company1 (branca: company1)
- */
 public class Prestec {
     private Usuari usuari;
     private Llibre llibre;
@@ -39,6 +30,7 @@ public class Prestec {
         this.dataRetornReal = LocalDate.now();
     }
 
+    //eltostringquenofalteeeh
     @Override
     public String toString() {
         String estat = actiu
