@@ -6,8 +6,6 @@ import java.util.List;
  * Conté la col·lecció de llibres i les operacions per gestionar-la:
  * afegir, modificar, eliminar, llistar i cercar (per títol o autor,
  * ignorant accents).
- *
- * Autor: dario (branca: dario)
  */
 public class Biblioteca {
     private List<Llibre> llibres;
@@ -18,7 +16,7 @@ public class Biblioteca {
         this.seguentId = 1;
     }
 
-    // ============== AFEGIR ==============
+    //AFEGIR
     public Llibre afegirLlibre(String titol, String autor, String categoria) {
         Llibre llibre = new Llibre(seguentId++, titol, autor, categoria);
         llibres.add(llibre);
@@ -26,7 +24,7 @@ public class Biblioteca {
         return llibre;
     }
 
-    // ============== MODIFICAR ==============
+    //MODIFICAR
     /**
      * Modifica el llibre amb l'id donat. Si algun camp està buit, no es canvia.
      */
@@ -39,7 +37,7 @@ public class Biblioteca {
         return true;
     }
 
-    // ============== ELIMINAR ==============
+    //ELIMINAR
     public boolean eliminarLlibre(int id) {
         Llibre l = buscarPerId(id);
         if (l == null) return false;
@@ -51,7 +49,7 @@ public class Biblioteca {
         return true;
     }
 
-    // ============== LLISTAR ==============
+    //LLISTAR
     public void llistarLlibres() {
         if (llibres.isEmpty()) {
             System.out.println("No hi ha cap llibre a la biblioteca.");
@@ -63,7 +61,7 @@ public class Biblioteca {
         }
     }
 
-    // ============== CERCAR ==============
+    //CERCAR
     public Llibre buscarPerId(int id) {
         for (Llibre l : llibres) {
             if (l.getId() == id) return l;
@@ -116,12 +114,12 @@ public class Biblioteca {
         return resultat;
     }
 
-    // ============== DISPONIBILITAT ==============
+    //DISPONIBILITAT
     public boolean comprovarDisponibilitat(int id) {
         Llibre l = buscarPerId(id);
         return l != null && !l.esPrestat();
     }
 
-    // ============== Getters ==============
+    //Getters
     public List<Llibre> getLlibres() { return llibres; }
 }
