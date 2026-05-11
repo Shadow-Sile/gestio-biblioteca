@@ -4,17 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Classe GestorBiblioteca
- * Gestiona els usuaris i els préstecs de la biblioteca. Controla l'estoc
- * (un llibre no es pot prestar dues vegades alhora) i el màxim de llibres
- * que un usuari pot tenir en préstec a la vegada.
- *
- * Genera estadístiques: llibre més prestat, usuari més actiu, préstecs
- * per categoria, etc.
- *
- * Autor: company1 (branca: company1)
- */
 public class GestorBiblioteca {
 
     /** Màxim de llibres que un usuari pot tenir alhora. */
@@ -32,7 +21,7 @@ public class GestorBiblioteca {
         this.seguentIdUsuari = 1;
     }
 
-    // ============== GESTIÓ D'USUARIS ==============
+    //GESTIÓ D'USUARIS
     public Usuari afegirUsuari(String nom, String dni) {
         Usuari u = new Usuari(seguentIdUsuari++, nom, dni);
         usuaris.add(u);
@@ -87,7 +76,7 @@ public class GestorBiblioteca {
         }
     }
 
-    // ============== PRÉSTECS ==============
+    //PRÉSTECS
     public void prestarLlibre(int idUsuari, int idLlibre) {
         Usuari u = buscarUsuariPerId(idUsuari);
         Llibre l = biblioteca.buscarPerId(idLlibre);
@@ -153,7 +142,7 @@ public class GestorBiblioteca {
         }
     }
 
-    // ============== ESTADÍSTIQUES ==============
+    //ESTADÍSTIQUES
     public void mostrarEstadistiques() {
         System.out.println("========= ESTADISTIQUES =========");
         System.out.println("Total llibres a la biblioteca: " + biblioteca.getLlibres().size());
